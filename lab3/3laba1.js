@@ -1,0 +1,15 @@
+'use strict';
+const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+function generateKey(length, characters) {
+  let result = '';
+  const charactersLength = characters.length;
+  for (let i = 0; i < length; i++) {
+  const randomIndex = Math.floor(Math.random() * charactersLength);
+  result += characters[randomIndex]
+  }
+  
+  return result;
+}
+
+const key = generateKey(18, characters);
+console.log(key); 
